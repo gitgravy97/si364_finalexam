@@ -25,6 +25,7 @@ urlpatterns = [
     path('ads/', include('ads.urls')),  # Keep
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     path('autos/', include('autos.urls')),
+    path('stars/', include('stars.urls')),
 ]
 
 # Keep everything below this line

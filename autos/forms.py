@@ -32,7 +32,6 @@ class CreateForm(forms.ModelForm):
             
     def save(self, commit=True) :
         instance = super(CreateForm, self).save(commit=False)
-
         # We only need to adjust picture if it is a freshly uploaded file
         f = instance.picture   # Make a copy
         if isinstance(f, InMemoryUploadedFile):  # Extract data from the form to the model

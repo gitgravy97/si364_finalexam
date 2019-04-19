@@ -1,0 +1,13 @@
+{% extends "stars_base_menu.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<p>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Submit">
+    <!-- this looks kinda problematic with the quotes. -->
+    <input type="submit" value="Cancel" onclick="window.location.href='{% url 'stars' %}';return false;">
+  </form>
+</p>
+{% endblock %}
